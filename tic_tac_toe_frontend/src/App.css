@@ -1,22 +1,22 @@
 :root {
-  /* Soft Cotton Candy Pastel Palette */
-  --cotton-bg: linear-gradient(135deg, #ffe8f7 0%, #d5eaff 60%, #eedbfb 100%);
-  --cotton-accent: #ffd8ec;
-  --cotton-board: linear-gradient(121deg, #deecfc 25%, #fdf6f0 90%);
-  --cotton-x: #ef73be;
-  --cotton-o: #8cc7f8;
-  --cotton-status-win: #c9e7e5;
-  --cotton-status-draw: #f8edc2;
-  --cotton-pink: #ffd5e5;
-  --cotton-blue: #b1dafe;
-  --cotton-purple: #d6cbfa;
-  --cotton-mint: #c9faed;
-  --cotton-yellow: #fdeec8;
-  --cotton-shadow: 0 4px 18px 3px #cbb4ec33, 0 6px 32px #e7d1f133;
-  --cotton-btn-gradient: linear-gradient(90deg,#ffc7e6 0%,#e0e7fe 100%);
-  --cotton-btn-hover: linear-gradient(90deg, #e7d1f1 0%, #c0f6fd 100%);
-  --cotton-board-border: #eac9f2;
-  --cotton-tile-shadow: 0 2px 8px #fbd5f699, 0 2px 18px #dacbf666;
+  /* Soft Marshmallow Pastel Palette (enhanced and rebalanced) */
+  --cotton-bg: linear-gradient(132deg, #ffe8f7 0%, #e3faf1 48%, #fff7e2 80%, #eedbfb 100%);
+  --cotton-accent: #ffe2fa;
+  --cotton-board: linear-gradient(120deg, #e4f6fd 0%, #fad7f6 76%, #e6fbe8 100%);
+  --cotton-x: #f3a1cd;
+  --cotton-o: #95d4e8;
+  --cotton-status-win: #dcf8ef;
+  --cotton-status-draw: #fefab7;
+  --cotton-pink: #FFE6EA;
+  --cotton-blue: #d6efff;
+  --cotton-purple: #ead9fb;
+  --cotton-mint: #d2fbe4;
+  --cotton-yellow: #fffad3;
+  --cotton-shadow: 0 8px 32px 6px #eeebfa33, 0 12px 42px #ffecc966;
+  --cotton-btn-gradient: linear-gradient(90deg, #fcf0ff 0%, #e6fbff 100%);
+  --cotton-btn-hover: linear-gradient(90deg, #ffe6ee 0%, #e0ffe9 100%);
+  --cotton-board-border: #f7eafa;
+  --cotton-tile-shadow: 0 3px 16px #fbeefb2d, 0 2px 18px #daf3ed55;
   --soft-font: 'Quicksand', 'Nunito', 'Montserrat', 'Arial Rounded MT', 'Arial', sans-serif;
 }
 
