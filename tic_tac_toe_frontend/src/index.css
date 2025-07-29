@@ -1,13 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Quicksand', 'Nunito', 'Montserrat', 'Arial Rounded MT', 'Arial', sans-serif;
-  background: linear-gradient(135deg, #ffe8f7 0%, #d5eaff 60%, #eedbfb 100%);
-  background-attachment: fixed;
+  font-family: 'Orbitron', 'Press Start 2P', 'Montserrat', 'Arial', sans-serif;
+  background: #221F1F;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #854f80;
-  transition: background 0.3s;
 }
 code {
-  font-family: 'Nunito', 'Fira Mono', 'monospace';
+  font-family: 'Press Start 2P', 'Fira Mono', 'monospace';
 }
