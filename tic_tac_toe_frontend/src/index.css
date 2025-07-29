@@ -1,13 +1,22 @@
 body {
   margin: 0;
   font-family: 'Quicksand', 'Nunito', 'Montserrat', 'Arial Rounded MT', 'Arial', sans-serif;
-  background: linear-gradient(135deg, #ffe8f7 0%, #d5eaff 60%, #eedbfb 100%);
+  background: linear-gradient(135deg, #ffe8f7 0%, #E7F6EE 70%, #ffeeba 100%);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #854f80;
+  color: #AE84BB;
   transition: background 0.3s;
+  min-height: 100vh;
+  border-radius: 0;
+  box-shadow: 0 0 32px 0 #ffe8f766, 0 8px 32px #faeed377;
 }
+
 code {
   font-family: 'Nunito', 'Fira Mono', 'monospace';
+  background: #fff8fb;
+  padding: .15em .4em;
+  border-radius: 8px;
+  color: #A395B1;
+  box-shadow: 0 1px 7px #f3eafc22;
 }
