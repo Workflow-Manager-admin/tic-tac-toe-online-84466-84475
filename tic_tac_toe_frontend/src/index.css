@@ -1,13 +1,24 @@
+/* Import rounded, marshmallow-like fonts */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700|Nunito:400,700|Fredoka+One:400&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Quicksand', 'Nunito', 'Montserrat', 'Arial Rounded MT', 'Arial', sans-serif;
+  font-family: 'Quicksand', 'Nunito', 'Fredoka One', 'Montserrat', 'Arial Rounded MT', 'Arial', sans-serif;
   background: linear-gradient(135deg, #ffe8f7 0%, #d5eaff 60%, #eedbfb 100%);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #854f80;
+  color: #a185b3;
+  font-weight: 500;
+  letter-spacing: 0.045em;
+  text-shadow: 0 1.2px 12px #efd9fa77, 0 1.2px 0 #ffffffcc;
   transition: background 0.3s;
 }
+
 code {
   font-family: 'Nunito', 'Fira Mono', 'monospace';
+  background: #fff2fd44;
+  border-radius: 6px;
+  padding: 0.1em 0.4em;
+  color: #b585ba;
 }

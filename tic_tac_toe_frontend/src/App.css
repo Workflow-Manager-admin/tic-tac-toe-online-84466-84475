@@ -1,5 +1,5 @@
 :root {
-  /* Soft Cotton Candy Pastel Palette */
+  /* Soft Cotton Candy Pastel Palette + Marshmallow Typography Styles */
   --cotton-bg: linear-gradient(135deg, #ffe8f7 0%, #d5eaff 60%, #eedbfb 100%);
   --cotton-accent: #ffd8ec;
   --cotton-board: linear-gradient(121deg, #deecfc 25%, #fdf6f0 90%);
@@ -17,10 +17,15 @@
   --cotton-btn-hover: linear-gradient(90deg, #e7d1f1 0%, #c0f6fd 100%);
   --cotton-board-border: #eac9f2;
   --cotton-tile-shadow: 0 2px 8px #fbd5f699, 0 2px 18px #dacbf666;
-  --soft-font: 'Quicksand', 'Nunito', 'Montserrat', 'Arial Rounded MT', 'Arial', sans-serif;
+  --soft-font: 'Quicksand', 'Nunito', 'Fredoka One', 'Montserrat', 'Arial Rounded MT', 'Arial', sans-serif;
+  --marshmallow-text-shadow: 0 2px 9px #fbf7fd99, 0 1.2px 0 #fff, 0 -2px 8px #d0bbfa44;
+  --marshmallow-pastel: #fde8f8;
+  --marshmallow-pastel2: #f8f0fe;
+  --marshmallow-letter-spacing: 0.09em;
+  --marshmallow-weight: 800;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700|Nunito:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700|Nunito:400,700|Fredoka+One:400&display=swap');
 
 /* App Layout */
 .App {
@@ -51,14 +56,20 @@
 /* Title Styling */
 .ttt-title {
   font-size: 2.3rem;
-  font-family: var(--soft-font);
+  font-family: 'Fredoka One', var(--soft-font);
   color: var(--cotton-x);
   text-align: center;
-  font-weight: 800;
+  font-weight: var(--marshmallow-weight);
   margin: 0 0 0.35em 0;
-  letter-spacing: 2px;
-  text-shadow: 0 1px 10px #f9e3f988, 0 1px 0 #fff;
-  filter: saturate(1.08);
+  letter-spacing: var(--marshmallow-letter-spacing);
+  text-shadow: var(--marshmallow-text-shadow), 0 1px 10px #f9e3f988;
+  filter: saturate(1.11) brightness(1.07);
+  background: var(--marshmallow-pastel);
+  border-radius: 23px;
+  padding: 0.18em 0.7em;
+  border-bottom: 3px solid #fceefb55;
+  box-shadow: 0 2px 16px #ffd8ec55;
+  outline: 2.5px solid #eee6f7aa;
 }
 
 /* Status Panel Styling */
@@ -67,13 +78,14 @@
   margin: 0.3em 0 1.3em 0;
   padding: 0.7em 0.7em;
   font-size: 1.22rem;
-  font-family: var(--soft-font);
-  font-weight: 700;
+  font-family: 'Fredoka One', var(--soft-font);
+  font-weight: var(--marshmallow-weight);
   background: var(--cotton-accent);
   color: var(--cotton-x);
   border-radius: 18px;
   text-align: center;
-  letter-spacing: .6px;
+  letter-spacing: var(--marshmallow-letter-spacing);
+  text-shadow: var(--marshmallow-text-shadow), 0 2px 9px #fdc5fd55;
   box-shadow: 0 0px 7px 0 #eac9f2cc, 0 2px 12px #c9e7e588;
   border: 2px solid var(--cotton-board-border);
   transition: background 0.3s, color 0.3s;
@@ -124,10 +136,11 @@
   font-size: 2.5rem;
   background: linear-gradient(135deg, #fff6fd 30%, #e0f4ff 100%);
   border: 2.5px solid #fcd1fb;
-  border-radius: 20px;
+  border-radius: 22px;
   color: #a185b3;
-  font-family: var(--soft-font);
-  font-weight: 900;
+  font-family: 'Fredoka One', var(--soft-font);
+  font-weight: var(--marshmallow-weight);
+  letter-spacing: 0.13em;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -136,7 +149,7 @@
   box-shadow: var(--cotton-tile-shadow);
   transition: border 0.18s, box-shadow 0.19s, background 0.24s, color 0.19s;
   user-select: none;
-  text-shadow: 0 2px 0 #fff, 0 3px 10px #ecd2ff7a;
+  text-shadow: var(--marshmallow-text-shadow), 0 2px 10px #efd7f655;
   border-bottom: 4px solid #ffe9fe;
 }
 
@@ -158,12 +171,18 @@
 
 .ttt-square[aria-label*="O"] {
   color: var(--cotton-o) !important;
-  text-shadow: 0 2px 13px #b1dafe, 0 1px 3px #fff, 0 0px 10px #8ee1ec;
+  font-family: 'Fredoka One', var(--soft-font);
+  font-weight: var(--marshmallow-weight);
+  text-shadow: var(--marshmallow-text-shadow), 0 2.5px 16px #c9faedaa, 0 0 5px #b1dafe99, 0 1px 3px #fff;
+  letter-spacing: 0.11em;
 }
 
 .ttt-square[aria-label*="X"] {
   color: var(--cotton-x) !important;
-  text-shadow: 0 2px 10px #ffd5e5, 0 2px 8px #ffb5d9, 0 1.6px 1.2px #fff;
+  font-family: 'Fredoka One', var(--soft-font);
+  font-weight: var(--marshmallow-weight);
+  text-shadow: var(--marshmallow-text-shadow), 0 2.5px 13px #ffd5e588, 0 2px 8px #ffb5d9, 0 1.6px 1.2px #fff;
+  letter-spacing: 0.11em;
 }
 
 /* Reset Button Styling */
@@ -173,15 +192,16 @@
   background: var(--cotton-btn-gradient);
   color: #ae84bb;
   font-size: 1.08rem;
-  font-family: var(--soft-font);
-  font-weight: 700;
+  font-family: 'Fredoka One', var(--soft-font);
+  font-weight: var(--marshmallow-weight);
   border: 2.5px solid #eac9f2;
   border-radius: 23px;
-  letter-spacing: 0.9px;
+  letter-spacing: 0.13em;
   cursor: pointer;
   box-shadow: 0 2px 12px #ebdff8, 0 2px 28px #f7faff66;
-  text-shadow: 0 1px 6px #fff, 0 0 0.5px #fceefb;
+  text-shadow: var(--marshmallow-text-shadow), 0 1px 6px #fff, 0 0 0.5px #fceefb;
   transition: background 0.2s, color 0.17s, border 0.13s, box-shadow 0.15s;
+  outline: 1.5px solid #eac9f288;
 }
 .ttt-reset-btn:hover, .ttt-reset-btn:focus {
   background: var(--cotton-btn-hover);
@@ -195,12 +215,13 @@
   width: 100%;
   text-align: center;
   margin-top: 2.1em;
-  font-size: .99em;
-  color: #bd93d8;
-  font-family: var(--soft-font);
-  letter-spacing: .5px;
-  text-shadow: 0 2px 8px #efeaff;
-  opacity: 0.92;
+  font-size: 1.1em;
+  color: #c7abd7;
+  font-family: 'Quicksand', var(--soft-font);
+  font-weight: 600;
+  letter-spacing: var(--marshmallow-letter-spacing);
+  text-shadow: var(--marshmallow-text-shadow), 0 1.8px 8px #efeaffcc;
+  opacity: 0.94;
   filter: saturate(1.07);
 }
 
@@ -208,9 +229,12 @@
   display: inline-block;
   background: linear-gradient(98deg, #f3eafc 45%, #ffd5e5 100%);
   padding: 0.25rem 0.9rem;
-  border-radius: 15px;
-  box-shadow: 0 0 6px #ffd8ec44, 0 0 4px #c9e7e577;
+  border-radius: 18px;
+  box-shadow: 0 0 7px #ffd8ec44, 0 0 4px #c9e7e577;
   color: #b48fc5;
+  font-family: 'Fredoka One', var(--soft-font);
+  letter-spacing: var(--marshmallow-letter-spacing);
+  text-shadow: var(--marshmallow-text-shadow), 0 3px 8px #f3eafcaa;
 }
 
 /* Responsive tweaks for mobile */
