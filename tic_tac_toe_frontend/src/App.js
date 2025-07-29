@@ -94,7 +94,7 @@ function App() {
         <button className="ttt-reset-btn" onClick={handleReset}>Reset Game</button>
         <footer className="ttt-footer">
           <span className="ttt-credit">
-            Minimal React • Inspired by KAVIA <span role="img" aria-label="sparkle">✨</span>
+            Soft Cotton Candy Theme • <span style={{ color: "#ef73be" }}>✦</span> Sweet & Whimsical <span role="img" aria-label="game">🧁🎲</span>
           </span>
         </footer>
       </main>
