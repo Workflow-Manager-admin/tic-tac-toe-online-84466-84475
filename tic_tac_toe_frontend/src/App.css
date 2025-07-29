@@ -1,0 +1,188 @@
+/* THEME & BRAND
+ * Primary:   #1565c0 (deep blue)
+ * Secondary: #fbc02d (warm yellow)
+ * Accent:    #43a047 (green)
+ * Minimalist, with ample whitespace, rounded corners, clean type
+ */
+
+:root {
+  --ttt-primary: #1565c0;
+  --ttt-secondary: #fbc02d;
+  --ttt-accent: #43a047;
+  --ttt-bg: #ffffff;
+  --ttt-bg-alt: #f8f9fa;
+  --ttt-border: #e0e0e0;
+  --ttt-x: var(--ttt-primary);
+  --ttt-o: var(--ttt-accent);
+  --ttt-status-bg: #fafbfc;
+  --ttt-status-win: var(--ttt-accent);
+  --ttt-status-draw: var(--ttt-secondary);
+}
+
+[data-theme="dark"] {
+  --ttt-bg: #181b22;
+  --ttt-bg-alt: #22252b;
+  --ttt-border: #232528;
+  --ttt-x: #82b1ff;
+  --ttt-o: #69f0ae;
+  --ttt-status-bg: #232528;
+}
+
+/* App Layout */
+.App {
+  min-height: 100vh;
+  background: var(--ttt-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.ttt-container {
+  margin: 0 auto;
+  padding: 2rem 1rem 1rem 1rem;
+  max-width: 360px;
+  background: var(--ttt-bg-alt);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(53,69,116,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ttt-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--ttt-primary);
+  margin: 0 0 0.3em 0;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.ttt-status {
+  width: 100%;
+  margin: 0.25em 0 1.1em 0;
+  padding: 0.45em 0;
+  font-size: 1.18rem;
+  font-weight: 600;
+  background: var(--ttt-status-bg);
+  color: var(--ttt-primary);
+  border-radius: 10px;
+  text-align: center;
+  transition: background 0.25s, color 0.25s;
+}
+.ttt-status[data-outcome="win"] { color: var(--ttt-status-win); }
+.ttt-status[data-outcome="draw"] { color: var(--ttt-status-draw); }
+.ttt-status[data-outcome="playing"] { color: var(--ttt-primary); }
+
+/* Board Styles */
+.ttt-board {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 290px;
+  margin: 0 auto 1.1em auto;
+  justify-content: center;
+}
+
+.ttt-board-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.ttt-square {
+  width: 80px;
+  height: 80px;
+  font-size: 2.8rem;
+  background: #fff;
+  border: 2px solid var(--ttt-border);
+  border-radius: 12px;
+  color: #282c34;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  outline: none;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.18s, box-shadow 0.25s, background 0.18s;
+  box-shadow: 0 1px 6px 0 rgba(53,69,116,0.03);
+  user-select: none;
+}
+.ttt-square:focus, .ttt-square:hover {
+  border-color: var(--ttt-primary);
+  box-shadow: 0 2px 8px 0 rgba(53,69,116,0.08);
+}
+.ttt-square:disabled {
+  cursor: default;
+  background: var(--ttt-bg-alt);
+  color: #b5bacf;
+}
+
+/* Board XO coloring */
+.ttt-square:empty { color: transparent; }
+.ttt-square:after {
+  content: '';
+}
+.ttt-square {
+  /* Set X/O color based on innerText */
+}
+.ttt-square {
+  transition: color 0.23s;
+}
+.ttt-square {
+  color: var(--ttt-x);
+}
+.ttt-square:empty { color: transparent; }
+.ttt-square[aria-label*="O"] {
+  color: var(--ttt-o) !important;
+}
+.ttt-square[aria-label*="X"] {
+  color: var(--ttt-x) !important;
+}
+
+/* Reset Button */
+.ttt-reset-btn {
+  margin-top: 0.7em;
+  padding: 0.6em 2.3em;
+  background: var(--ttt-primary);
+  color: #fff;
+  font-size: 1.11rem;
+  border: none;
+  border-radius: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.22s, box-shadow 0.22s;
+  box-shadow: 0 1px 4px 0 rgba(53,69,116,0.08);
+}
+.ttt-reset-btn:hover, .ttt-reset-btn:focus {
+  background: var(--ttt-accent);
+}
+
+/* Footer/Credit */
+.ttt-footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.9em;
+  font-size: 0.93em;
+  color: #a1abbd;
+  letter-spacing: .2px;
+}
+
+@media (max-width: 600px) {
+  .ttt-container {
+    padding: 1.2rem 0.3rem 0.5rem 0.3rem;
+    max-width: 98vw;
+  }
+  .ttt-board {
+    max-width: 98vw;
+  }
+  .ttt-square {
+    width: 21vw;
+    max-width: 65px;
+    height: 21vw;
+    max-height: 65px;
+    font-size: 2rem;
+  }
+}
